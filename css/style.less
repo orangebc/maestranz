@@ -1,0 +1,464 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800,900);
+
+// Colors
+@grey: #353535;
+
+// Generic tags
+
+body {
+	font-size: 16px;
+	font-family: "Raleway", Arial, Helvetica, sans-serif;
+}
+
+#privacyToggled {
+	display: none;
+}
+
+// Layout classes
+.no-space {
+	padding: 0;
+}
+
+.gallery__image-container,
+.apartaments__image-container,
+.insides__image-container {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.imageShown {
+	display: none;
+}
+
+// Generic classes
+.generic__title {
+	font-size: 62px;
+	font-weight: normal;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 0;
+}
+	@media only screen and (min-width: 320px){
+		.generic__title {
+			font-size: 28px;
+			font-weight: 600;
+		}
+	}
+	@media only screen and (min-width: 480px){
+		.generic__title {
+			font-size: 36px;
+			font-weight: 600;
+		}
+	}
+	@media only screen and (min-width: 1200px){
+		.generic__title {
+			font-size: 78px;
+			font-weight: 600;
+		}
+	}
+.generic__info {
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.5em;
+	text-align: justify;
+}
+.generic__list {
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	li {
+		padding: .5em 0;
+	}
+}
+.generic__subtitle {
+	font-size: 18px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+// Header
+
+.header {
+	background-color: @grey;
+
+}
+	@media only screen and (min-width: 1200px){
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 50;
+			height: 95px;
+		}
+	}
+	.header__logo {
+		padding: 1em;
+	}
+	.header__text {
+		color: white;
+		font-size: 21px;
+		font-weight: 200;
+	}
+	@media only screen and (min-width: 320px){
+		.header__logo,
+		.header__info {
+			text-align: center;
+		}
+	}
+	.header__info--phone,
+	.header__info--email {
+		padding-top: 1.5em;
+	}
+	@media only screen and (min-width: 320px){
+		.header__text {
+			font-size: 14px;
+		}
+	}
+	.header__info--callToAction {
+		text-align: center;
+		height: 95px;
+	}
+	.header__button {
+		outline: none;
+		border-radius: 0;
+		background-color: darken(@grey, 10%);
+		color: white;
+		font-size: 21px;
+		font-weight: 200;
+		text-transform: uppercase;
+		height: 100%;
+		transition: all .5s ease;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: white;
+			color: @grey;
+			font-weight: 200;
+		}
+	}
+	@media only screen and (min-width: 320px){
+		.header__button {
+			width: 100%;
+			font-size: 16px;
+		}
+	}
+	@media only screen and (min-width: 1600px){
+		.header__button {
+			width: 80%;
+			margin-left: auto;
+		}
+	}
+	.header__info--icon {
+		color: @grey;
+		margin-right: 1em;
+		width: 32px;
+		height: 32px;
+		padding-top: 6px;
+		border-radius: 50%;
+		background-color: white;
+		text-align: center;
+		font-size: 14px;
+	}
+
+// Main
+
+.main {
+	display: none;
+	background-color: rgba(53, 53, 53, .8);
+	position: absolute;
+	top: 95px;
+	right: 0;
+	width: 400px;
+	padding: 1em;
+	z-index: 40;
+}
+	@media only screen and (min-width: 320px){
+		.main {
+			position: absolute;
+			right: 0;
+			top: 350px;
+			width: 100%;
+		}
+	}
+	@media only screen and (min-width: 480px) {
+		.main {
+			position: absolute;
+			right: 0;
+			left: 50%;
+			margin-left: -200px;
+			top: 350px;
+			width: 400px;
+		}
+	}
+	@media only screen and (min-width: 768px) {
+		.main {
+			position: absolute;
+			right: 0;
+			left: 50%;
+			margin-left: -200px;
+			top: 350px;
+			width: 400px;
+		}
+	}
+	@media only screen and (min-width: 992px) {
+		.main {
+			position: absolute;
+			right: 0;
+		}
+	}
+	@media only screen and (min-width: 1200px) {
+		.main {
+			position: absolute;
+			top: 95px;
+			right: 0;
+			left: auto;
+			width: 400px;
+			padding: 1em;
+			margin-left: 0;
+		}
+	}
+	@media only screen and (min-width: 1600px) {
+		.main {
+			position: absolute;
+			top: 95px;
+			right: 50px;
+			left: auto;
+			width: 400px;
+			padding: 1em;
+			margin-left: 0;
+		}
+	}
+	.main__form {
+		padding: 1em;
+		label {
+			color: white;
+			text-align: center;
+			font-weight: 300;
+			text-transform: uppercase;
+			padding: .5em 0;
+		}
+		input {
+			border-radius: 0;
+			height: 40px;
+			padding: 15px;
+		}
+		input[type="submit"] {
+			width: 100%;
+			border-radius: 0;
+			margin-top: 20px;
+			padding: 12px 0; 
+			text-transform: uppercase;
+		}
+	}
+	.main__close {
+		margin-top: 2em;
+		color: darken(#FFF, 45%);
+		text-align: left;
+		text-transform: uppercase;
+		font-size: 14px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
+// Showcase
+.showcase {
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+	.showcase__title {
+		font-size: 64px;
+		font-weight: normal;
+		text-transform: uppercase;
+		small {
+			color: @grey;
+			font-size: 60px;
+			font-weight: 800;
+			display: block;
+			margin-top: -5px;
+			margin-left: -15px;
+			text-align: center;
+		}
+	}
+	@media only screen and (min-width: 320px) {
+		.showcase__title {
+			font-size: 34px;
+			small {
+				font-size: 34px;
+			}
+		}
+	}
+	@media only screen and (min-width: 1680px) {
+		.showcase__title {
+			font-size: 84px;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin-bottom: 0;
+			small {
+				color: @grey;
+				font-size: 82px;
+				font-weight: 800;
+				display: block;
+				margin-top: -5px;
+				margin-left: -15px;
+				text-align: center;
+			}
+		}
+	}
+	@media only screen and (min-width: 1200px) and (max-width: 1679px){
+		.showcase__title {
+			font-size: 48px;
+			font-weight: normal;
+			text-transform: uppercase;
+			small {
+				color: @grey;
+				font-size: 46px;
+				font-weight: 800;
+				display: inline-block;
+				margin-top: -5px;
+				margin-left: 0;
+				text-align: center;
+			}
+		}
+	}
+	.showcase__content {
+		display: block;
+	}
+	@media only screen and (min-width: 320px) {
+		.showcase__content {
+			margin-top: 0;
+		}
+	}
+	@media only screen and (min-width: 1200px) {
+		.showcase__content {
+			margin-top: -220px;
+			position: relative;
+			z-index: 30;
+		}
+	}
+	@media only screen and (min-width: 1680px) {
+		.showcase__content {
+			margin-top: -330px;
+			position: relative;
+			z-index: 30;
+		}
+	}
+	.showcase__info {
+		line-height: 1.5em;
+		font-size: 18px;
+		font-weight: normal;
+		padding: 1em 0;
+		text-align: justify;
+	}
+
+// Amenities
+.amenities {
+	padding: 2em 0;
+	background: url(../images/bg2.jpg) no-repeat;
+	background-size: cover;
+}
+	@media only screen and (min-width: 1200px){
+		.amenities {
+			padding: 5em 0;
+		}
+	}
+.amenities__activities {
+	margin: 1.5em 0;
+	li {
+		padding: 1em;
+	}
+}
+
+// Apartments
+.apartments {
+	padding: 2em 0;
+}
+	@media only screen and (min-width: 1200px){
+		.apartments {
+			padding: 5em 0;
+		}
+	}
+
+// Insides
+
+.insides {
+	padding: 2em 0 0 0;
+	background: url(../images/bg2.jpg) no-repeat;
+	background-size: cover;
+	h2.generic__title {
+		margin-bottom: 1em;
+	}
+}
+	@media only screen and (min-width: 1200px){
+		.insides {
+			padding: 5em 0 0 0;
+		}
+	}
+
+
+// Logos
+
+.logos {
+	img {
+		width: 90px;
+		height: auto;
+	}
+}
+.logos ul li {
+	padding: 2em 6em;
+}
+
+// Location
+
+.location {
+	padding: 2em 0;
+}
+
+	@media only screen and (min-width: 1200px) {
+		.location {
+			padding: 5em 0 0 0;
+			h2.generic__title {
+				padding-bottom: 2em;
+			}
+		}
+
+	}
+
+.map {
+	width: 100%;
+	min-height: 500px;
+}
+	@media only screen and (min-width: 320px) {
+		.map {
+			min-height: 250px;
+		}
+	}
+	@media only screen and (min-width: 480px) {
+		.map {
+			min-height: 350px;
+		}
+	}
+// Footer
+
+.footer {
+	background-color: @grey;
+	padding: 2em 0;
+	.generic__info {
+		color: white;
+	}
+}
+	.footer__info,
+	.footer__privacy {
+		color: white;
+	}
+	.footer__privacy {
+		font-weight: 600;
+		text-transform: uppercase;
+		&:hover {
+			cursor: pointer;
+		}
+	}
